@@ -1,0 +1,75 @@
+section {
+  overflow-x: clip;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.animate {
+  transition: 1s;
+  animation: slide-left linear;
+  animation-timeline: view();
+}
+
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+}
+
+ul.timeline::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: #777;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+}
+
+ul.timeline > li {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+ul.timeline > li:before {
+  content: " ";
+  background: #ffffff;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #4caf50;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
+.mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) {
+  background-color: #4caf50;
+  color: #ffd740;
+}
+
+::ng-deep.mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled)
+  .mdc-evolution-chip__text-label {
+  color: #ffd740 !important;
+}
+
+//keyframe animations
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  40%,
+  60% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  80%,
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}

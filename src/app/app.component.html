@@ -1,0 +1,20 @@
+<app-home></app-home>
+<mat-sidenav-container class="sections">
+    <mat-sidenav #sidenav>
+        <app-sidednav-mobile (closeSideNav)="sidenav.close()"></app-sidednav-mobile>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <app-nav-bar class="sticky-top" *ngIf="visible" (SideNavToggle)="sidenav.toggle()"></app-nav-bar>
+        <app-about></app-about>
+        <app-experience></app-experience>
+        <app-education></app-education>
+        <app-skills></app-skills>
+        <app-projects></app-projects>
+        <app-contact></app-contact>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- <div class="sections">
+    <app-nav-bar></app-nav-bar>
+    <app-about></app-about>
+</div> -->

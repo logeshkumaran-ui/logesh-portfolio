@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="shadow">
+    <div class="container d-flex align-items-center justify-content-between">
+        <button *ngIf="isHandset$ | async" type="button" aria-label="Toggle sidenav" mat-icon-button
+            (click)="openSidenav()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span class="cursor-pointer"><a href="#home">LOGESH'S PORTFOLIO</a></span>
+
+        <div class="nav mt-3" *ngIf="(isHandset$ | async) === false">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </div>
+
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
+            (click)="toggleThemes()">
+            <mat-icon *ngIf="!isDarkMode">dark_mode</mat-icon>
+            <mat-icon *ngIf="isDarkMode">light_mode</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
