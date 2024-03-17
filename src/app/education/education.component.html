@@ -1,34 +1,31 @@
 <div class="section-divider" id="education">
     <div class="container">
-        <mat-card class="shadow-sm rounded-2 border border-light-subtle">
-            <mat-card-content>
-                <div class="row">
-                    <div class="col-12 col-lg-3 col-md-12 d-flex justify-content-center">
-                        <div class="box">
-                            <div class="content">
-                                <img src="../../assets/images/profile-pic.jpg" alt="profile picture">
-                                <p class="mb-0">Logesh kumaran<br><span>Angular Developer</span></p>
-                                <a href="#contact">Hire me</a>
+        <header class="section-heading text-center mb-3">
+            <h3>Education</h3>
+        </header>
+        <div class="row">
+            <div class="col-12">
+                <mat-card class="shadow-sm rounded-2 border border-light-subtle mb-3"
+                    *ngFor="let education of educations" data-aos="flip-up" data-aos-delay="100" data-aos-duration="500"
+                    data-aos-anchor-placement="top-center">
+                    <mat-card-content>
+                        <div class="row">
+                            <div class="col-12 col-lg-3 col-md-3 d-flex flex-column justify-content-center align-items-center"
+                                data-aos="slide-right" data-aos-delay="300" data-aos-duration="500"
+                                data-aos-anchor-placement="top-center">
+                                <img src="{{education.coverpic}}" alt="education image" class="education-img shadow-sm">
+                            </div>
+                            <div class="col-12 col-lg-9 col-md-3" data-aos="slide-left" data-aos-delay="300"
+                                data-aos-duration="500" data-aos-anchor-placement="top-center">
+                                <h3 class="text-mat-primary">{{education.degree}}</h3>
+                                <h5 class="text-mat-primary">{{education.fieldofstudy}}</h5>
+                                <p>{{education.period}}</p>
+                                <p>{{education.school}}</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-9 col-md-12">
-                        <div class="about">
-                            <header class="section-heading">
-                                <h3>About Me</h3>
-                            </header>
-                            <h5 class="mb-0"><span>Name:</span> Logesh kumaran</h5>
-                            <h6><span>Profession:</span> Angular Developer</h6>
-                            <p class="mb-0">
-                                I'm a Software Developer at Augmented Transformations private limited.
-                                An ambitious and result-driven Angular Developer with an exhilarating journey of 2 years
-                                in the tech world. My expertise lies in crafting stunning user interfaces and delivering
-                                top-notch frontend solutions for a diverse range of products.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </mat-card-content>
-        </mat-card>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
     </div>
 </div>

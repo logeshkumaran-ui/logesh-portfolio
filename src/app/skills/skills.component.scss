@@ -17,7 +17,7 @@ section {
 }
 
 .progress-container .progress-badge {
-  color: #888;
+  //   color: #4caf50;
   font-size: 0.8571em;
   text-transform: uppercase;
 }
@@ -31,32 +31,21 @@ section {
   margin-top: 14px;
 }
 
-.progress-container .progress .progress-bar {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  background-color: #888;
-}
-
 .progress-container .progress .progress-value {
   position: absolute;
   top: 2px;
   right: 0;
-  color: #888;
   font-size: 0.8571em;
 }
 
-.progress-container.progress-primary .progress {
-  background: rgba(10, 49, 68, 0.349);
-}
-
 .progress-container.progress-primary .progress-bar {
-  background: #00334d;
+  background: #4caf50;
 }
 
-.progress-container.progress-primary .progress-value,
-.progress-container.progress-primary .progress-badge {
-  color: #00334d;
-}
+// .progress-container.progress-primary .progress-value,
+// .progress-container.progress-primary .progress-badge {
+//   color: #4caf50;
+// }
 
 .progress-container {
   margin-bottom: 20px;

@@ -53,27 +53,27 @@ export class PortfolioService {
     },
     {
       'id': '2',
-      'skill': 'CSS',
+      'skill': 'CSS, BOOTSTRAP',
       'progress': '80%'
     },
     {
       'id': '3',
-      'skill': 'BOOTSTRAP',
+      'skill': 'Angular, Angular Material',
       'progress': '80%'
     },
     {
       'id': '4',
-      'skill': 'Angular, Angular Material',
-      'progress': '75%'
-    },
-    {
-      'id': '5',
       'skill': 'Javascript, Typescript',
       'progress': '75%'
     },
     {
-      'id': '6',
+      'id': '5',
       'skill': 'SQL, POSTGRESQL',
+      'progress': '75%'
+    },
+    {
+      'id': '6',
+      'skill': 'NODEJS, EXPRESS',
       'progress': '70%'
     }
   ];
@@ -82,30 +82,34 @@ export class PortfolioService {
     {
       "id": 1,
       "school": "SNS College Of Technology",
-      "Degree": "Master of Computer Applications - MCA",
+      "degree": "Master of Computer Applications - MCA",
       "fieldofstudy": "Computer science",
-      "period": "SEP-2019 to MAY-2021"
+      "period": "Sep-2019 to May-2021",
+      "coverpic": "../assets/images/d65e918b-4b59-4102-8d8f-75e64dd66203.jpg"
     },
     {
       "id": 2,
       "school": "SNR Sons College Of Arts and Science",
-      "Degree": "Bachelor's degree",
+      "degree": "Bachelor's degree",
       "fieldofstudy": "Computer science",
-      "period": "JUN-2016 to MAY-2019"
+      "period": "Jun-2016 to May-2019",
+      "coverpic": "../assets/images/college-background-image-for-portfolio-education-s.jpg"
     },
     {
       "id": 3,
       "school": "PACM Higher Secondary School",
-      "Degree": "Higher secondary",
+      "degree": "Higher secondary",
       "fieldofstudy": "Computer science",
-      "period": "JUN-2014 to APR-2016"
+      "period": "Jun-2014 to Apr-2016",
+      "coverpic": "../assets/images/college-background-image-for-portfolio-education-s (2).jpg"
     },
     {
-      "id": 3,
+      "id": 4,
       "school": "PACM Higher Secondary School",
-      "Degree": "Secondary",
+      "degree": "Secondary",
       // "fieldofstudy": "Schooling",
-      "period": "JUN-2013 to APR-2014"
+      "period": "Jun-2013 to Apr-2014",
+      "coverpic": "../assets/images/college-background-image-for-portfolio-education-s (1).jpg"
     }
   ]
 

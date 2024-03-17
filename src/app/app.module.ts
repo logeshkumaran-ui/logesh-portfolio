@@ -14,6 +14,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { MaterialModule } from './material.module';
 import { SidednavMobileComponent } from './sidednav-mobile/sidednav-mobile.component';
 import { SplitPipe } from './split.pipe';
+import { ReferencesComponent } from './references/references.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { SplitPipe } from './split.pipe';
     ProjectsComponent,
     SkillsComponent,
     SidednavMobileComponent,
-    SplitPipe
+    SplitPipe,
+    ReferencesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

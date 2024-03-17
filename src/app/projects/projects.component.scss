@@ -1,0 +1,19 @@
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-wrapper {
+  border: 1px solid #ddd;
+  display: flex;
+  overflow-x: auto;
+}
+
+.projects-wrapper .projects {
+  min-width: 100%;
+  height: 200px;
+  line-height: 200px;
+}

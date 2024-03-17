@@ -7,11 +7,11 @@ section {
   justify-content: center;
 }
 
-.animate {
-  transition: 1s;
-  animation: slide-left linear;
-  animation-timeline: view();
-}
+// .animate {
+//   transition: 1s;
+//   animation: slide-left linear;
+//   animation-timeline: view();
+// }
 
 ul.timeline {
   list-style-type: none;
