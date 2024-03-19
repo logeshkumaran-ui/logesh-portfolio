@@ -2,9 +2,9 @@
     <div class="container d-flex align-items-center justify-content-between">
         <button *ngIf="isHandset$ | async" type="button" aria-label="Toggle sidenav" mat-icon-button
             (click)="openSidenav()">
-            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            <mat-icon aria-label="Side nav toggle icon" color="accent">menu</mat-icon>
         </button>
-        <span class="cursor-pointer"><a href="#home">LOGESH'S PORTFOLIO</a></span>
+        <span class="cursor-pointer text-accent"><a href="#home">LOGESH'S PORTFOLIO</a></span>
 
         <div class="nav mt-3" *ngIf="(isHandset$ | async) === false">
             <ul class="nav__list">
@@ -20,8 +20,8 @@
 
         <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
             (click)="toggleThemes()">
-            <mat-icon *ngIf="!isDarkMode">dark_mode</mat-icon>
-            <mat-icon *ngIf="isDarkMode">light_mode</mat-icon>
+            <mat-icon *ngIf="!isDarkMode" color="accent">dark_mode</mat-icon>
+            <mat-icon *ngIf="isDarkMode" color="accent">light_mode</mat-icon>
         </button>
     </div>
 </mat-toolbar>

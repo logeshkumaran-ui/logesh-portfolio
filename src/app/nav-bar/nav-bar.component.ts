@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, inject } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, inject } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -8,10 +8,14 @@ import { map, shareReplay } from 'rxjs/operators';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent {
-  isDarkMode: boolean = false;
+export class NavBarComponent implements OnInit {
+  isDarkMode: boolean = true;
   @Output() SideNavToggle = new EventEmitter();
   private breakpointObserver = inject(BreakpointObserver);
+
+  ngOnInit(): void {
+    document.body.classList.add('dark-theme');
+  }
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(

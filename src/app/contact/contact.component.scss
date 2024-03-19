@@ -1,0 +1,100 @@
+#contact {
+  background: url("../../assets/images/contact_bg_3.jpg") center top no-repeat
+    fixed;
+  background-size: cover;
+  padding: 80px 0 80px 0;
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+// .section-heading h3 {
+//   display: inline-block;
+//   text-align: left;
+//   padding-bottom: 5px;
+//   color: #ffd740;
+//   position: relative;
+//   border-bottom: 1px solid #ffd740;
+// }
+
+// .section-heading h3::before {
+//   content: "";
+//   position: absolute;
+//   display: block;
+//   width: 0;
+//   height: 0;
+//   bottom: 0px;
+//   right: 0;
+//   border-top: 10px solid;
+//   border-right: 10px solid;
+//   border-color: transparent #ffd740;
+// }
+
+// .section-heading h3::after {
+//   content: "";
+//   position: absolute;
+//   display: block;
+//   width: 0;
+//   height: 0;
+//   bottom: 0px;
+//   left: 0;
+//   border-top: 10px solid;
+//   border-left: 10px solid;
+//   border-color: transparent #ffd740;
+// }
+
+// #contact::before {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+//   background: rgba(000, 000, 000, 0.7);
+// }
+
+// .contact-container {
+//   background-image: url("path/to/your/background/image.jpg");
+//   background-size: cover;
+//   background-position: center;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.contact-card {
+  background-color: rgba(255, 255, 255, 0.7); /* Glassy effect */
+  width: 90%;
+  max-width: 400px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .contact-card {
+    max-width: 600px;
+  }
+
+  .flex-grow {
+    flex: 1;
+  }
+}

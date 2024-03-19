@@ -124,7 +124,7 @@ $dark-theme: mat.define-dark-theme(
 
 .apply-custom-typography {
   @include mat.typography-hierarchy($custom-typography);
-  @include mat.all-component-themes($light-theme);
+  // @include mat.all-component-themes($dark-theme);
   // @include mat.all-component-colors($light-theme);
 }
 body.light-theme {
@@ -151,9 +151,23 @@ body.dark-theme {
     margin-right: 2px !important;
     font-size: 59%;
   }
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 90% !important;
+    height: 100%;
+    backface-visibility: hidden;
+  }
 }
 
 @media (max-width: 991px) {
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 80% !important;
+    height: 100%;
+    backface-visibility: hidden;
+  }
 }
 @media (max-width: 768px) {
   .box {
@@ -165,6 +179,14 @@ body.dark-theme {
     font-size: 0.5em !important;
     padding: 8px 15px !important;
   }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 70% !important;
+    height: 100%;
+    backface-visibility: hidden;
+  }
 }
 @media (max-width: 520px) {
   .social_links {
@@ -174,8 +196,30 @@ body.dark-theme {
     height: 38px !important;
     width: 38px !important;
   }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 60% !important;
+    height: 100%;
+    backface-visibility: hidden;
+  }
 }
 @media (max-width: 462px) {
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 50% !important;
+    height: 100%;
+    backface-visibility: hidden;
+  }
 }
 @media (max-width: 371px) {
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 40% !important;
+    height: 100%;
+    backface-visibility: hidden;
+  }
 }
