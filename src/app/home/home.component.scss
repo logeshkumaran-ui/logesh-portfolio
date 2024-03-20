@@ -6,8 +6,9 @@
   height: 100%;
   opacity: 1;
   // object-fit: cover;
-  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: -1;
   animation: back-banner-animation linear;
   animation-timeline: view();

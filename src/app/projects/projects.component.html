@@ -3,9 +3,9 @@
         <header class="section-heading text-center mb-3">
             <h3>Projects</h3>
         </header>
-        <div class="row p-5" id="projects-row">
+        <div class="row py-5" id="projects-row">
             <div class="col-6 project-card" *ngFor="let project of projects" data-aos="fade-up" data-aos-delay="100"
-                data-aos-duration="500" data-aos-anchor-placement="top-top">
+                data-aos-duration="500" data-aos-anchor-placement="top-center">
                 <div class="pcard">
                     <div class="card-inner">
                         <div class="card-front">
@@ -14,7 +14,12 @@
                         </div>
                         <div class="card-back">
                             <img src="{{project.coverpic}}" alt="project picture" height="">
-                            <p *ngFor="let tech of project.techstack">{{tech}}</p>
+                            <div class="d-flex flex-wrap border-top border-light pt-1">
+                                <p *ngFor="let tech of project.techstack" class="me-2">#{{tech}}</p>
+                            </div>
+                            <div class="card-back-button">
+                                <a href="#"><i class='bx bx-link-external me-2'></i>Visit</a>
+                            </div>
                         </div>
                     </div>
                 </div>

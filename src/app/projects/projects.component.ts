@@ -10,8 +10,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 export class ProjectsComponent implements AfterViewInit {
   projects = [
     {
-      title: 'E-Commerce Emporium: Your One-Stop Online Shopping Destination',
-      description: 'E-Commerce Emporium is an innovative online shopping platform designed to provide users with a seamless and convenient shopping experience from the comfort of their homes. With a user-friendly interface and a vast array of products, ranging from electronics and fashion to household essentials and more, E-Commerce Emporium caters to diverse consumer needs',
+      title: 'E-Commerce Emporium: Your One-Stop Online Shop',
+      description: 'E-Commerce Emporium: Your one-stop online shop, delivering convenience and choice right to your doorstep with a user-friendly interface and diverse product selection.',
       coverpic: '../../assets/images/amy-shamblen-F52I5BtDuhY-unsplash.jpg',
       techstack: ['Angular', 'NodeJS'],
       website: '#projects'
@@ -25,14 +25,14 @@ export class ProjectsComponent implements AfterViewInit {
     },
     {
       title: 'BlogPostify',
-      description: 'BlogPostify is a modern web application designed for creating, managing, and sharing blog posts. With an intuitive user interface built using Angular for the frontend and Node.js for the backend, BlogPostify offers a seamless experience for both bloggers and readers alike.',
+      description: 'BlogPostify, a sleek web app, facilitates effortless blog creation, management, and sharing, boasting an Angular frontend and Node.js backend for a user-friendly experience.',
       coverpic: '../../assets/images/thought-catalog-505eectW54k-unsplash.jpg',
       techstack: ['Angular', 'NodeJS'],
       website: '#projects'
     },
     {
       title: 'LearnHub: Udemy Clone Project',
-      description: 'LearnHub" is a comprehensive e-learning platform designed to replicate the functionalities of Udemy, one of the leading online learning marketplaces. This clone project aims to provide a user-friendly interface for both instructors and students to create, publish, and enroll in courses across various subjects.',
+      description: '"LearnHub" is an e-learning platform mirroring Udemy\'s features, facilitating course creation and enrollment for instructors and students across diverse subjects with a user-friendly interface.',
       coverpic: '../../assets/images/lewis-keegan-gkiZ-F3yPiY-unsplash.jpg',
       techstack: ['Angular', 'NodeJS'],
       website: '#projects'

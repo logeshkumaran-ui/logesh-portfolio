@@ -15,7 +15,7 @@ a {
 }
 
 .nav__item {
-  padding: 10px;
+  padding: 8px;
   margin-right: 3px;
   border-radius: 0.5rem;
   color: #ffd740;
@@ -28,4 +28,8 @@ a {
 
 .nav__link:hover {
   color: #ffd740;
+}
+
+.nav__link i {
+  font-size: 18px;
 }

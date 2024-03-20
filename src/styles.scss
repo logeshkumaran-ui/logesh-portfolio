@@ -149,30 +149,44 @@ body.dark-theme {
   .nav__item {
     padding: 5px !important;
     margin-right: 2px !important;
-    font-size: 59%;
+    font-size: 78%;
   }
-  .card-front,
-  .card-back {
-    position: absolute;
+
+  .education-img {
     width: 90% !important;
-    height: 100%;
-    backface-visibility: hidden;
+    height: 90% !important;
   }
+
+  // .card-front h3 {
+  //   font-size: 95%;
+  // }
+
+  // .card-front p {
+  //   font-size: 95%;
+  // }
 }
 
 @media (max-width: 991px) {
-  .card-front,
-  .card-back {
-    position: absolute;
-    width: 80% !important;
-    height: 100%;
-    backface-visibility: hidden;
+  html {
+    font-size: 85%;
   }
+
+  .education-img {
+    width: 80% !important;
+    height: 80% !important;
+  }
+  // .card-front h3 {
+  //   font-size: 85% !important;
+  // }
+
+  // .card-front p {
+  //   font-size: 85% !important;
+  // }
 }
 @media (max-width: 768px) {
   .box {
-    width: 150px !important;
-    height: 150px !important;
+    width: 70% !important;
+    height: 70% !important;
   }
 
   .content a {
@@ -180,13 +194,21 @@ body.dark-theme {
     padding: 8px 15px !important;
   }
 
-  .card-front,
-  .card-back {
-    position: absolute;
-    width: 70% !important;
-    height: 100%;
-    backface-visibility: hidden;
+  html {
+    font-size: 80%;
   }
+
+  .education-img {
+    width: 70% !important;
+    height: 100px !important;
+  }
+  // .card-front h3 {
+  //   font-size: 80% !important;
+  // }
+
+  // .card-front p {
+  //   font-size: 80% !important;
+  // }
 }
 @media (max-width: 520px) {
   .social_links {
@@ -197,29 +219,42 @@ body.dark-theme {
     width: 38px !important;
   }
 
-  .card-front,
-  .card-back {
-    position: absolute;
+  .education-img {
     width: 60% !important;
-    height: 100%;
-    backface-visibility: hidden;
+    height: 60% !important;
   }
 }
 @media (max-width: 462px) {
-  .card-front,
-  .card-back {
-    position: absolute;
-    width: 50% !important;
-    height: 100%;
-    backface-visibility: hidden;
+  html {
+    font-size: 70%;
   }
+
+  .education-img {
+    width: 50% !important;
+    height: 50% !important;
+  }
+  // .card-front h3 {
+  //   font-size: 70% !important;
+  // }
+
+  // .card-front p {
+  //   font-size: 70% !important;
+  // }
 }
 @media (max-width: 371px) {
-  .card-front,
-  .card-back {
-    position: absolute;
-    width: 40% !important;
-    height: 100%;
-    backface-visibility: hidden;
+  html {
+    font-size: 50%;
   }
+
+  .education-img {
+    width: 50% !important;
+    height: 50% !important;
+  }
+  // .card-front h3 {
+  //   font-size: 50% !important;
+  // }
+
+  // .card-front p {
+  //   font-size: 50% !important;
+  // }
 }
