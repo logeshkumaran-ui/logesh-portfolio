@@ -1,0 +1,252 @@
+.header-image {
+  grid-column: 1/ -1;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  // object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  animation: back-banner-animation linear;
+  animation-timeline: view();
+  animation-range: exit;
+}
+
+.header-image::before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 100svh;
+  overflow-x: clip;
+  padding-block: 7rem;
+  margin-block-end: 3rem;
+}
+
+.heading {
+  color: #f1f1f1;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  animation: fade-out linear;
+  animation-timeline: view();
+  animation-range: exit -200px;
+}
+
+.heading__name {
+  color: #ffd740;
+}
+
+.text-animate {
+  position: relative;
+  width: 22.4rem;
+}
+
+.text-animate .heading__role {
+  color: transparent;
+  -webkit-text-stroke: 0.7px #ffd740;
+  background-image: linear-gradient(#ffd740, #ffd740);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: homeBgText 6s linear infinite;
+  animation-delay: 2s;
+}
+
+.text-animate .heading__role::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-right: 2px solid #ffd740;
+  z-index: -1;
+  animation: homeCursorText 6s linear infinite;
+  animation-delay: 2s;
+}
+
+.heading .heading__btnbox {
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 40px;
+}
+
+.heading__btnbox a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 150px;
+  z-index: 1;
+  border: 1px solid #ffd740;
+  background: #ffd740;
+  border-radius: 8px;
+  // font-size: 19px;
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.heading__btnbox a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #4caf50;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.heading__btnbox a:hover {
+  color: #ffd740;
+}
+
+.heading__btnbox a:nth-child(2) {
+  background-color: transparent;
+  color: #ffd740;
+}
+
+.heading__btnbox a:nth-child(2)::before {
+  background: #ffd740;
+}
+
+.heading__btnbox a:nth-child(2):hover {
+  color: #4caf50;
+}
+
+.heading__btnbox a:hover::before {
+  width: 100%;
+}
+
+.bx {
+  font-size: 19px;
+  margin-right: 3px;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  height: 30px;
+  width: 30px;
+  transform: translateY(-80px) translateX(-50%) rotate(45deg);
+
+  animation: fade-out linear;
+  animation-timeline: view();
+  animation-range: exit -400px;
+}
+
+.scroll-down span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-bottom: 2px solid #ffd740;
+  border-right: 2px solid #ffd740;
+  animation: scrollDown 1.4s linear infinite;
+  opacity: 0;
+}
+
+.scroll-down span:nth-child(1) {
+  transform: translate(-15px, -15px);
+  animation-delay: -0.4s;
+}
+
+.scroll-down span:nth-child(2) {
+  transform: translate(0, 0);
+  animation-delay: -0.2s;
+}
+
+.scroll-down span:nth-child(3) {
+  transform: translate(15px, 15px);
+  animation-delay: 0s;
+}
+
+//keyframe animations
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes back-banner-animation {
+  25% {
+    opacity: 1;
+  }
+  85%,
+  100% {
+    opacity: 0;
+    scale: 3;
+  }
+}
+
+@keyframes homeBgText {
+  0%,
+  10%,
+  100% {
+    background-position: -22.5rem 0;
+  }
+  65%,
+  85% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes homeCursorText {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  65%,
+  78%,
+  85% {
+    width: 100%;
+    opacity: 1;
+  }
+  75%,
+  81% {
+    opacity: 0;
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    top: -5px;
+    left: -5px;
+    opacity: 0;
+  }
+  25% {
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+  }
+  50%,
+  100% {
+    top: 5px;
+    left: 5px;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,87 @@
+#references {
+  background: url("../../assets/images/testimonial-bg.jpg") center top no-repeat
+    fixed;
+  background-size: cover;
+  padding: 80px 0 80px 0;
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+#references .references__container {
+  //   max-width: 700px;
+  width: 100%;
+  padding: 50px;
+}
+
+#references::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(000, 000, 000, 0.7);
+}
+
+#references .references__container {
+  position: relative;
+  z-index: 9;
+}
+
+#references i {
+  font-size: 36px;
+  padding: 20px 0;
+  color: #4caf50;
+}
+
+#references .testimonial-item {
+  text-align: center;
+}
+
+#references .testimonial-item .testimonial-img {
+  width: 120px;
+  border: 10px solid rgba(256, 256, 256, 0.1);
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+#references .testimonial-item h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 15px 0 5px 0;
+  color: #4caf50;
+}
+
+#references .testimonial-item h4 {
+  color: #999999;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0 0 10px 0;
+}
+
+#references .testimonial-item p {
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 auto;
+}
+
+:host::ng-deep .owl-carousel .owl-nav,
+.owl-carousel .owl-dots {
+  margin-top: 5px !important;
+  text-align: center !important;
+}
+
+:host::ng-deep .owl-carousel .owl-dot {
+  display: inline-block;
+  margin: 0 5px !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background-color: #ffffff !important;
+}
+
+:host::ng-deep .owl-carousel .owl-dot.active {
+  background-color: #ffd740 !important;
+}

@@ -1,0 +1,48 @@
+<div class="section-divider" id="contact">
+    <div class="bg-container">
+        <!-- <div class="bg-banner col-12" [ngStyle]="{'background-image': 'url(\'../../assets/images/contact_bg_3.jpg\')'}">
+        </div> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                    <div class="contact-container">
+                        <img src="../../assets//images/form-1.png" id="image1-class" class="image1-class"
+                            alt="contact form Image">
+                        <img src="../../assets//images/form-2.png" id="image2-class" class="image2-class"
+                            alt="contact form Image">
+                        <header class="section-heading">
+                            <h3 class="mb-3 text-center">Contact</h3>
+                        </header>
+                        <mat-card class="contact-card" data-aos="zoom-in-up" data-aos-delay="100"
+                            data-aos-duration="500" data-aos-anchor-placement="top-center">
+                            <mat-card-content>
+                                <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submitForm()">
+                                    <div class="form-row gap-2">
+                                        <mat-form-field class="flex-grow">
+                                            <input matInput placeholder="Your Name" formControlName="name" required>
+                                        </mat-form-field>
+                                        <mat-form-field class="flex-grow">
+                                            <input matInput placeholder="Your Email" formControlName="email" required>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="form-row">
+                                        <mat-form-field class="flex-grow">
+                                            <input matInput placeholder="Subject" formControlName="subject" required>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="form-row">
+                                        <mat-form-field class="flex-grow">
+                                            <textarea matInput placeholder="Message" formControlName="message"
+                                                required></textarea>
+                                        </mat-form-field>
+                                    </div>
+                                    <button mat-raised-button color="primary" type="submit">Send</button>
+                                </form>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

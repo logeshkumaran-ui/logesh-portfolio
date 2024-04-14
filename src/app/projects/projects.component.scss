@@ -1,0 +1,124 @@
+#projects-container {
+  overflow: hidden;
+}
+
+#projects-row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.project-card:last-child {
+  margin-right: 0;
+}
+
+.pcard {
+  // width: 450px;
+  height: 350px;
+  // height: 55vh;
+  perspective: 1000px;
+  // border-radius: 0 50px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.pcard:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #ffffff;
+  color: #000;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  border: 5px solid #000000;
+  // border-radius: 10px;
+  border-radius: 0 50px;
+  justify-content: space-around;
+  // font-size: 24px;
+  transform: rotateY(0deg);
+}
+
+.card-front h3 {
+  color: #4caf50;
+  // font-size: 24px;
+}
+
+// .card-front p {
+//   font-size: 16px;
+// }
+
+.card-back {
+  background-color: #000000;
+  color: #f1f1f1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  border: 5px solid #ffffff;
+  // border-radius: 10px;
+  border-radius: 0 50px;
+  justify-content: space-around;
+  // font-size: 24px;
+  transform: rotateY(180deg);
+}
+
+.card-back img {
+  width: 100%;
+  height: 150px;
+  align-items: center;
+  object-fit: cover;
+}
+
+.card-back .card-back-button a {
+  position: relative;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.card-back .card-back-button a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.card-back .card-back-button a:hover {
+  color: #000;
+}
+
+.card-back .card-back-button a:hover::before {
+  width: 100%;
+}

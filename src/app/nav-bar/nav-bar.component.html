@@ -1,0 +1,54 @@
+<mat-toolbar color="primary" class="shadow">
+        <div class="container d-flex align-items-center justify-content-between">
+                <button class="toggle-btn" type="button" aria-label="Toggle sidenav" mat-icon-button
+                        (click)="openSidenav()">
+                        <mat-icon *ngIf="!expanded" aria-label="Side nav toggle icon" color="accent">menu</mat-icon>
+                        <mat-icon *ngIf="expanded" aria-label="Side nav toggle icon" color="accent">close</mat-icon>
+                </button>
+                <span class="cursor-pointer text-accent"><a href="#home">LOGESH'S PORTFOLIO</a></span>
+
+                <div class="nav" [class.navactive]="expanded">
+                        <ul class="nav__list">
+                                <li class="nav__item" [ngClass]="{ 'active': activeNavItem === 'home' }"><a href="#home"
+                                                class="nav__link" (click)="setActiveNavItem('home')"> <i
+                                                        class='bx bx-home'></i> Home</a></li>
+                                <li class="nav__item" [ngClass]="{ 'active': activeNavItem === 'about' }"><a
+                                                href="#about" class="nav__link" (click)="setActiveNavItem('about')"><i
+                                                        class='bx bxs-user-detail'></i>
+                                                About</a>
+                                </li>
+                                <li class="nav__item" [ngClass]="{ 'active': activeNavItem === 'experience' }"><a
+                                                href="#experience" class="nav__link"
+                                                (click)="setActiveNavItem('experience')"><i
+                                                        class='bx bx-briefcase-alt-2'></i>
+                                                Experience</a></li>
+                                <li class="nav__item" [ngClass]="{ 'active': activeNavItem === 'education' }"><a
+                                                href="#education" class="nav__link"
+                                                (click)="setActiveNavItem('education')"><i
+                                                        class='bx bxs-graduation'></i>
+                                                Education</a></li>
+                                <li class="nav__item" [ngClass]="{ 'active': activeNavItem === 'skills' }"><a
+                                                href="#skills" class="nav__link" (click)="setActiveNavItem('skills')"><i
+                                                        class='bx bx-bar-chart'></i>
+                                                Skills</a>
+                                </li>
+                                <li class="nav__item" [ngClass]="{ 'active': activeNavItem === 'projects' }"><a
+                                                href="#projects" class="nav__link"
+                                                (click)="setActiveNavItem('projects')"><i class='bx bxs-grid-alt'></i>
+                                                Projects</a>
+                                </li>
+                                <li class="nav__item" [ngClass]="{ 'active': activeNavItem === 'contact' }"><a
+                                                href="#contact" class="nav__link"
+                                                (click)="setActiveNavItem('contact')"><i class='bx bxs-envelope'></i>
+                                                Contact</a>
+                                </li>
+                        </ul>
+                </div>
+
+                <button mat-icon-button class="example-icon favorite-icon"
+                        aria-label="Example icon-button with heart icon" (click)="toggleThemes()">
+                        <mat-icon *ngIf="!isDarkMode" color="accent">dark_mode</mat-icon>
+                        <mat-icon *ngIf="isDarkMode" color="accent">light_mode</mat-icon>
+                </button>
+        </div>
+</mat-toolbar>

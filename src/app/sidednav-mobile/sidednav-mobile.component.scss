@@ -1,0 +1,44 @@
+.sidenav-list span {
+  padding-left: 8px;
+}
+
+.clos:hover {
+  cursor: pointer;
+  padding: 3px;
+  background-color: #e2dcdc;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__list li {
+  list-style: none;
+}
+
+.nav__item {
+  padding: 10px;
+  margin-right: 3px;
+  border-radius: 0.5rem;
+  color: #ffd740;
+}
+
+.nav__item:hover {
+  background-color: #ffffff33;
+  color: #f1f1f1;
+}
+
+.nav__link:hover {
+  color: #ffd740;
+}

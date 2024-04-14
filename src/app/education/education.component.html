@@ -1,0 +1,48 @@
+<div class="section-divider" id="education">
+    <div class="container">
+        <header class="section-heading text-center mb-3">
+            <h3>Education</h3>
+        </header>
+        <div class="row">
+            <div class="col-12">
+                <mat-card class="shadow-sm rounded-2 border border-light-subtle mb-3" data-aos="fade-up"
+                    data-aos-delay="100" data-aos-duration="500" data-aos-anchor-placement="top-center">
+                    <mat-card-content>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h2 class="text-mat-primary">College</h2>
+                                <ul class="timeline" data-aos="slide-right" data-aos-delay="300" data-aos-duration="500"
+                                    data-aos-anchor-placement="top-center">
+                                    <li *ngFor="let education of educations[0].college">
+                                        <h3 class="text-mat-primary" data-aos="fade-zoom-in"
+                                            data-aos-easing="ease-in-back" data-aos-delay="400" data-aos-offset="0">
+                                            {{education.degree}}</h3>
+                                        <h5 class="text-mat-primary" data-aos="fade-zoom-in"
+                                            data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0">
+                                            {{education.fieldofstudy}}</h5>
+                                        <p>{{education.period}}</p>
+                                        <p>{{education.school}}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h2 class="text-mat-primary">School</h2>
+                                <ul class="timeline" data-aos="slide-left" data-aos-delay="300" data-aos-duration="500"
+                                    data-aos-anchor-placement="top-center">
+                                    <li *ngFor="let education of educations[1].school">
+                                        <h3 class="text-mat-primary" data-aos="fade-zoom-in"
+                                            data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-offset="0">
+                                            {{education.degree}}</h3>
+                                        <h5 class="text-mat-primary">{{education.fieldofstudy}}</h5>
+                                        <p>{{education.period}}</p>
+                                        <p>{{education.school}}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
