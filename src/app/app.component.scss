@@ -3,6 +3,7 @@
   animation: fade-in linear forwards;
   animation-timeline: view();
   animation-range: 250px 650px;
+  transition: all;
 }
 
 @keyframes fade-in {

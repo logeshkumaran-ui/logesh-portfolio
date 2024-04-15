@@ -1,8 +1,8 @@
 import { AfterViewInit, Component } from '@angular/core';
-// import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import Draggable from 'gsap/Draggable';
-import { gsap, ScrollTrigger, Draggable } from "gsap/all";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Draggable from 'gsap/Draggable';
+// import { gsap, ScrollTrigger, Draggable } from "gsap/all";
 
 @Component({
   selector: 'app-projects',
