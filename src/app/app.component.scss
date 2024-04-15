@@ -11,3 +11,19 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .sections {
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 250px 650px;
+    transition: all;
+  }
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+}

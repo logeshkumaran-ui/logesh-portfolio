@@ -250,3 +250,25 @@
     opacity: 0;
   }
 }
+
+@media screen and (max-width: 768px) {
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes back-banner-animation {
+    25% {
+      opacity: 1;
+    }
+    85%,
+    100% {
+      opacity: 0;
+      scale: 3;
+    }
+  }
+}
