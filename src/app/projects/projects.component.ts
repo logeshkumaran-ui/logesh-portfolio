@@ -1,6 +1,8 @@
 import { AfterViewInit, Component } from '@angular/core';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import Draggable from 'gsap/Draggable';
+import { gsap, ScrollTrigger, Draggable } from "gsap/all";
 
 @Component({
   selector: 'app-projects',
@@ -38,22 +40,66 @@ export class ProjectsComponent implements AfterViewInit {
       website: '#projects'
     },
   ];
+  scrollTrigger: any;
+  draggableInstance: any;
 
   ngAfterViewInit() {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, Draggable);
+    this.initHorizontalScrollAnimation();
+    this.initManualDragScrolling();
 
-    // Create the horizontal scroll animation
-    gsap.to("#projects-row", {
-      x: () => -(document.querySelector("#projects-row")!.scrollWidth - document.documentElement.clientWidth + 250),
-      scrollTrigger: {
-        trigger: "#projects",
-        scrub: .5,
-        pin: true,
-        start: "top top",
-        end: () => "+=" + (document.querySelector("#projects-row")!.scrollWidth - document.documentElement.clientWidth)
+    window.addEventListener('resize', this.handleResize.bind(this));
+  }
+
+  ngOnDestroy() {
+    if (this.scrollTrigger) {
+      this.scrollTrigger.kill();
+    }
+    if (this.draggableInstance) {
+      this.draggableInstance.kill();
+    }
+
+    window.removeEventListener('resize', this.handleResize.bind(this));
+  }
+
+  initHorizontalScrollAnimation() {
+    const projectsRow = document.querySelector("#projects-row")! as HTMLElement;
+    const containerWidth = projectsRow.clientWidth;
+
+    this.scrollTrigger = ScrollTrigger.create({
+      trigger: '#projects',
+      start: 'top top',
+      end: () => `+=${projectsRow.scrollWidth - containerWidth}`,
+      pin: true,
+      scrub: 0.5,
+      onUpdate: self => {
+        const progress = self.progress;
+        const scrollWidth = projectsRow.scrollWidth - containerWidth;
+        const scrollValue = -scrollWidth * progress;
+        projectsRow.style.transform = `translateX(${scrollValue}px)`;
       }
     });
   }
 
+  initManualDragScrolling() {
+    const projectsRow = document.querySelector("#projects-row")! as HTMLElement;
+    const projectsContainer = document.querySelector("#projects-container")! as HTMLElement;
+    const containerWidth = projectsRow.scrollWidth;
+
+    this.draggableInstance = Draggable.create(projectsRow, {
+      type: 'x',
+      edgeResistance: 1,
+      bounds: { minX: -containerWidth + projectsContainer.clientWidth, maxX: 0 },
+      dragClickables: true,
+      cursor: 'grab',
+      activeCursor: "grabbing"
+    });
+  }
+
+  handleResize() {
+    if (this.scrollTrigger) {
+      this.scrollTrigger.refresh();
+    }
+  }
 }
 

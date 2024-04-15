@@ -12,7 +12,6 @@ import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { MaterialModule } from './material.module';
-import { SidednavMobileComponent } from './sidednav-mobile/sidednav-mobile.component';
 import { SplitPipe } from './split.pipe';
 import { ReferencesComponent } from './references/references.component';
 import { FooterComponent } from './footer/footer.component';
@@ -28,7 +27,6 @@ import { FooterComponent } from './footer/footer.component';
     ContactComponent,
     ProjectsComponent,
     SkillsComponent,
-    SidednavMobileComponent,
     SplitPipe,
     ReferencesComponent,
     FooterComponent

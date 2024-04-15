@@ -5,7 +5,7 @@
                         <mat-icon *ngIf="!expanded" aria-label="Side nav toggle icon" color="accent">menu</mat-icon>
                         <mat-icon *ngIf="expanded" aria-label="Side nav toggle icon" color="accent">close</mat-icon>
                 </button>
-                <span class="cursor-pointer text-accent"><a href="#home">LOGESH'S PORTFOLIO</a></span>
+                <span class="cursor-pointer text-accent"><a (click)="reload()">LOGESH'S PORTFOLIO</a></span>
 
                 <div class="nav" [class.navactive]="expanded">
                         <ul class="nav__list">

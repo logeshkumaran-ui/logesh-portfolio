@@ -24,6 +24,10 @@ export class NavBarComponent implements OnInit {
     this.expanded = !this.expanded;
   }
 
+  reload() {
+    window.location.reload();
+  }
+
   // isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
   //   .pipe(
   //     map(result => result.matches),

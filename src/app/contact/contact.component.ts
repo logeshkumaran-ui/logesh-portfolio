@@ -1,8 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-// import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { gsap, ScrollTrigger } from "gsap/all";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-contact',
@@ -27,7 +26,7 @@ export class ContactComponent implements AfterViewInit {
     gsap.to("#image1-class", {
       scrollTrigger: {
         trigger: '#image1-class',
-        toggleActions: 'restart pause resume pause',
+        // toggleActions: 'restart pause resume pause',
         start: 'top center',
         end: () => '+=' + (document.querySelector("#image1-class") as HTMLElement).offsetWidth,
       },
@@ -40,7 +39,7 @@ export class ContactComponent implements AfterViewInit {
     gsap.to("#image2-class", {
       scrollTrigger: {
         trigger: '#image2-class',
-        toggleActions: 'restart pause resume pause',
+        // toggleActions: 'restart pause resume pause',
         start: 'top center',
         end: () => '+=' + (document.querySelector("#image2-class") as HTMLElement).offsetWidth,
       },
