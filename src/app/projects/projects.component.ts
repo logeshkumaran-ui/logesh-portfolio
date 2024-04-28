@@ -23,7 +23,7 @@ export class ProjectsComponent implements AfterViewInit {
       description: 'WeatherNow is your go-to application for instant weather updates. With a sleek and intuitive interface, WeatherNow provides real-time weather information for any location worldwide.',
       coverpic: '../../assets/images/brian-mcgowan-kKyxIwvljBg-unsplash.jpg',
       techstack: ['Angular', 'NodeJS'],
-      website: '#projects'
+      website: 'https://weathernow-logesh.netlify.app/'
     },
     {
       title: 'BlogPostify',
