@@ -11,8 +11,24 @@ export class PortfolioService {
   experience = [
     {
       "id": 1,
+      "position": "Associate - Projects",
+      "period": "Dec-2024 to Present",
+      "company": "Cognizant",
+      "location": "Coimbatore",
+      "description": `Started to colloborate with the team and the organization to develop project as a full stack developer`,
+      "skills": [
+        { "img": "../assets/images/angular_logo.png", "skill": 'Angular' },
+        { "img": "../assets/images/angular_material.jpg", "skill": 'Angular Material' },
+        { "img": "../assets/images/primeng-logo.png", "skill": 'primeNg' },
+        { "img": "../assets/images/JavaScript_logo.png", "skill": 'JavaScript' },
+        { "img": "../assets/images/typescript_logo.png", "skill": 'Typescript' },
+        { "img": "../assets/images/.netcore_logo.png", "skill": '.NET Core' }
+      ]
+    },
+    {
+      "id": 2,
       "position": "Software developer",
-      "period": "Jun-2022 to Present",
+      "period": "Jul-2022 to Nov-2024",
       "company": "Augmented Transformations Private Limited",
       "location": "Pune",
       "description": `Following my internship, I embarked on a journey of continuous learning and growth, honing my skills in Angular and expanding my knowledge through self-directed research and exploration of advanced concepts.
@@ -28,7 +44,7 @@ export class PortfolioService {
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "position": "Intern",
       "period": "Feb-2022 to Jun-2022",
       "company": "Augmented Transformations Private Limited",
