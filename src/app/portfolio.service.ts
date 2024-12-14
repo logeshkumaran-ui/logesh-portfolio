@@ -11,7 +11,7 @@ export class PortfolioService {
   experience = [
     {
       "id": 1,
-      "position": "Angular developer",
+      "position": "Software developer",
       "period": "Jun-2022 to Present",
       "company": "Augmented Transformations Private Limited",
       "location": "Pune",
@@ -29,7 +29,7 @@ export class PortfolioService {
     },
     {
       "id": 2,
-      "position": "Software developer intern",
+      "position": "Intern",
       "period": "Feb-2022 to Jun-2022",
       "company": "Augmented Transformations Private Limited",
       "location": "Bangalore",
