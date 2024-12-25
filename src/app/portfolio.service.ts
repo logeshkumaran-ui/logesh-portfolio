@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
@@ -6,7 +7,9 @@ import { Observable, of } from 'rxjs';
 })
 export class PortfolioService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   experience = [
     {
@@ -147,4 +150,8 @@ export class PortfolioService {
   getEducation(): Observable<any> {
     return of(this.education);
   }
+
+  sendMail(data: any): Observable<any> {
+    return this.http.post<any>("https://api.web3forms.com/submit", data);
+   }
 }

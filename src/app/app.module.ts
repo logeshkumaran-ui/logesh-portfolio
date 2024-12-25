@@ -29,7 +29,7 @@ import { FooterComponent } from './footer/footer.component';
     SkillsComponent,
     SplitPipe,
     ReferencesComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,5 @@
 <div class="section-divider" id="contact">
     <div class="bg-container">
-        <!-- <div class="bg-banner col-12" [ngStyle]="{'background-image': 'url(\'../../assets/images/contact_bg_3.jpg\')'}">
-        </div> -->
         <div class="container">
             <div class="row">
                 <div class="col-12 d-flex flex-column justify-content-center align-items-center">
@@ -13,29 +11,54 @@
                         <header class="section-heading">
                             <h3 class="mb-3 text-center">Contact</h3>
                         </header>
-                        <mat-card class="contact-card" data-aos="zoom-in-up" data-aos-delay="100"
+                        <mat-card class="contact-card" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="500" data-aos-anchor-placement="center-center">
                             <mat-card-content>
                                 <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submitForm()">
                                     <div class="form-row gap-2">
                                         <mat-form-field class="flex-grow">
                                             <input matInput placeholder="Your Name" formControlName="name" required>
+                                            <!-- Error message for 'name' field -->
+                                            <mat-error *ngIf="contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched">
+                                                Name is required.
+                                            </mat-error>
+                                            <!-- <mat-error *ngIf="contactForm.get('name')?.hasError('minlength') && contactForm.get('name')?.touched">
+                                                Name must be at least 3 letters.
+                                            </mat-error> -->
                                         </mat-form-field>
+                            
                                         <mat-form-field class="flex-grow">
                                             <input matInput placeholder="Your Email" formControlName="email" required>
+                                            <!-- Error message for 'email' field -->
+                                            <mat-error *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched">
+                                                Email is required.
+                                            </mat-error>
+                                            <!-- <mat-error *ngIf="contactForm.get('email')?.hasError('email') && contactForm.get('email')?.touched">
+                                                Please enter a valid email.
+                                            </mat-error> -->
                                         </mat-form-field>
                                     </div>
+                            
                                     <div class="form-row">
                                         <mat-form-field class="flex-grow">
                                             <input matInput placeholder="Subject" formControlName="subject" required>
+                                            <!-- Error message for 'subject' field -->
+                                            <mat-error *ngIf="contactForm.get('subject')?.hasError('required') && contactForm.get('subject')?.touched">
+                                                Subject is required.
+                                            </mat-error>
                                         </mat-form-field>
                                     </div>
+                            
                                     <div class="form-row">
                                         <mat-form-field class="flex-grow">
-                                            <textarea matInput placeholder="Message" formControlName="message"
-                                                required></textarea>
+                                            <textarea matInput placeholder="Message" formControlName="body" required></textarea>
+                                            <!-- Error message for 'message' field -->
+                                            <mat-error *ngIf="contactForm.get('body')?.hasError('required') && contactForm.get('body')?.touched">
+                                                Message is required.
+                                            </mat-error>
                                         </mat-form-field>
                                     </div>
+                            
                                     <button mat-raised-button color="primary" type="submit">Send</button>
                                 </form>
                             </mat-card-content>
