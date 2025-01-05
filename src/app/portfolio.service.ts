@@ -18,7 +18,7 @@ export class PortfolioService {
       "period": "Dec-2024 to Present",
       "company": "Cognizant",
       "location": "Coimbatore",
-      "description": `Started to colloborate with the team and the organization to develop project as a full stack developer`,
+      "description": `Building on my previous experience as a Software Developer, I am applying my expertise in Angular and TypeScript to contribute to scalable, user-friendly applications. I am actively learning project structures and best practices from senior developers, enhancing my skills to deliver impactful results as a full-stack developer`,
       "skills": [
         { "img": "../assets/images/angular_logo.png", "skill": 'Angular' },
         { "img": "../assets/images/angular_material.jpg", "skill": 'Angular Material' },
